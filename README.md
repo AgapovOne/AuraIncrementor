@@ -8,7 +8,10 @@ Incrementor class. Fully tested framework &amp; pod
 - Swiftlint
 - Codecov connection
 - Test internal interface cases (?)
-- Release to cocoapods
+
+## How to use
+
+`pod try AuraIncrementor` or download and open .xcodeproj :)
 
 ---
 
