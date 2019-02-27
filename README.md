@@ -3,6 +3,15 @@ Incrementor class. Fully tested framework &amp; pod
 
 ---
 
+## TODO
+
+- Swiftlint
+- Codecov connection
+- Test internal interface cases (?)
+- Release to cocoapods
+
+---
+
 ## Задача для SWE - Basic
 
 Нужно написать класс на Java/Swift/Golang/С (Си) со следующим интерфейсом (псевдокод):
@@ -18,7 +27,7 @@ class Incrementor {
    * Увеличивает текущее число на один. После каждого вызова этого
    * метода getNumber() будет возвращать число на один больше.
    */
-  void 
+  void
 incrementNumber();
   /**
    * Устанавливает максимальное значение текущего числа.
@@ -43,4 +52,4 @@ incrementNumber();
 Покрытие тестами.
 Наличие документации.
 Общая читабельность и простота кода.
-В идеале результат можно предоставить в виде скрытого gist-а на gist.github.com. 
+В идеале результат можно предоставить в виде скрытого gist-а на gist.github.com.
