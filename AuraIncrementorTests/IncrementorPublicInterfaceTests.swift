@@ -11,13 +11,14 @@ import XCTest
 
 class IncrementorPublicInterfaceTests: XCTestCase {
 
+    // MARK: - Unit tests
     // MARK: Get Number
     func testGetNumber() {
-        let valueToCheck = 0
+        let minimumValue = 0
 
         let incrementor = Incrementor()
 
-        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
+        XCTAssertEqual(incrementor.number, minimumValue, "Value should be minimum after initialization")
     }
 
 //    func testGetNumberWithValidValue() {
@@ -39,7 +40,8 @@ class IncrementorPublicInterfaceTests: XCTestCase {
 
     // MARK: Increment number
     func testIncrementNumberReturnsPreviousPlusOne() {
-        let newNumber = Incrementor.Constants.defaultMinimumValue + 1
+//        let newNumber = Incrementor.Constants.minimumValue + 1
+        let newNumber = 1
         let incrementor = Incrementor()
 
         incrementor.increment()
@@ -57,17 +59,6 @@ class IncrementorPublicInterfaceTests: XCTestCase {
         XCTAssertEqual(incrementor.maximumValue, maximumValue)
     }
 
-    func testMaximumValueResetsNumberToZero() {
-        let maximumValue = 1
-        let incrementor = Incrementor()
-
-        try! incrementor.setMaximumValue(maximumValue)
-        incrementor.increment() // 1
-        incrementor.increment() // 
-
-        XCTAssertEqual(incrementor.maximumValue, maximumValue)
-    }
-
     func testShouldNotAllowSetMaximumNumberToLessThanZero() {
         let maximumValue = -5
         let incrementor = Incrementor()
@@ -76,6 +67,46 @@ class IncrementorPublicInterfaceTests: XCTestCase {
             try incrementor.setMaximumValue(maximumValue)
             XCTFail("Shouldn't allow to set up value below zero. Trying to set \(maximumValue)")
         } catch {
+            print(error.localizedDescription)
+            XCTAssertEqual(error.localizedDescription.isEmpty, false)
         }
+    }
+
+    // MARK: - Integration tests
+    func testIncrementationWithMaximumValueReachsMaximumValue() {
+        let maximumValue = 1
+        let incrementor = Incrementor()
+
+        try! incrementor.setMaximumValue(maximumValue)
+        incrementor.increment() // 1
+
+        XCTAssertEqual(incrementor.number, maximumValue)
+    }
+
+    func testIncrementationWithMaximumValueResetsNumberToZero() {
+        let minimumValue = 0
+        let maximumValue = 1
+
+        let incrementor = Incrementor()
+
+        try! incrementor.setMaximumValue(maximumValue)
+        incrementor.increment() // 1
+        incrementor.increment() // 0
+
+        XCTAssertEqual(incrementor.number, minimumValue)
+    }
+
+    func testIncrementationWithMaximumValueWillContinueAfterReset() {
+        let maximumValue = 2
+
+        let incrementor = Incrementor()
+
+        try! incrementor.setMaximumValue(maximumValue)
+        incrementor.increment() // 1
+        incrementor.increment() // 2
+        incrementor.increment() // 0
+        incrementor.increment() // 1
+
+        XCTAssertEqual(incrementor.number, 1)
     }
 }
