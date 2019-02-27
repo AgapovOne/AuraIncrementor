@@ -1,5 +1,5 @@
 //
-//  AuraIncrementorTests.swift
+//  IncrementorPublicInterfaceTests.swift
 //  AuraIncrementorTests
 //
 //  Created by Alex Agapov on 27/02/2019.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import AuraIncrementor
 
-class AuraIncrementorPublicInterfaceTests: XCTestCase {
+class IncrementorPublicInterfaceTests: XCTestCase {
 
     // MARK: Get Number
     func testGetNumber() {
@@ -20,22 +20,22 @@ class AuraIncrementorPublicInterfaceTests: XCTestCase {
         XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
     }
 
-    func testGetNumberWithValidValue() {
-        let valueToCheck = 666
-        Incrementor.Constants.defaultMinimumValue = valueToCheck
-
-        let incrementor = Incrementor()
-
-        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
-    }
-
-    func testGetNumberWithDefaultValue() {
-        let valueToCheck = Incrementor.Constants.defaultMinimumValue
-
-        let incrementor = Incrementor()
-
-        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
-    }
+//    func testGetNumberWithValidValue() {
+//        let valueToCheck = 666
+//        Incrementor.Constants.defaultMinimumValue = valueToCheck
+//
+//        let incrementor = Incrementor()
+//
+//        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
+//    }
+//
+//    func testGetNumberWithDefaultValue() {
+//        let valueToCheck = Incrementor.Constants.defaultMinimumValue
+//
+//        let incrementor = Incrementor()
+//
+//        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
+//    }
 
     // MARK: Increment number
     func testIncrementNumberReturnsPreviousPlusOne() {
@@ -66,5 +66,16 @@ class AuraIncrementorPublicInterfaceTests: XCTestCase {
         incrementor.increment() // 
 
         XCTAssertEqual(incrementor.maximumValue, maximumValue)
+    }
+
+    func testShouldNotAllowSetMaximumNumberToLessThanZero() {
+        let maximumValue = -5
+        let incrementor = Incrementor()
+
+        do {
+            try incrementor.setMaximumValue(maximumValue)
+            XCTFail("Shouldn't allow to set up value below zero. Trying to set \(maximumValue)")
+        } catch {
+        }
     }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D486AA82226E58B007D11CB /* AuraIncrementor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D486A9E2226E58B007D11CB /* AuraIncrementor.framework */; };
-		8D486AAD2226E58B007D11CB /* AuraIncrementorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AAC2226E58B007D11CB /* AuraIncrementorTests.swift */; };
+		8D486AAD2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AAC2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift */; };
 		8D486AAF2226E58B007D11CB /* AuraIncrementor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D486AA12226E58B007D11CB /* AuraIncrementor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D486AB92226E6DC007D11CB /* Incrementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AB82226E6DC007D11CB /* Incrementor.swift */; };
 /* End PBXBuildFile section */
@@ -28,7 +28,7 @@
 		8D486AA12226E58B007D11CB /* AuraIncrementor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuraIncrementor.h; sourceTree = "<group>"; };
 		8D486AA22226E58B007D11CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D486AA72226E58B007D11CB /* AuraIncrementorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuraIncrementorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D486AAC2226E58B007D11CB /* AuraIncrementorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuraIncrementorTests.swift; sourceTree = "<group>"; };
+		8D486AAC2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementorPublicInterfaceTests.swift; sourceTree = "<group>"; };
 		8D486AAE2226E58B007D11CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D486AB82226E6DC007D11CB /* Incrementor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incrementor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +83,7 @@
 		8D486AAB2226E58B007D11CB /* AuraIncrementorTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D486AAC2226E58B007D11CB /* AuraIncrementorTests.swift */,
+				8D486AAC2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift */,
 				8D486AAE2226E58B007D11CB /* Info.plist */,
 			);
 			path = AuraIncrementorTests;
@@ -206,7 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D486AAD2226E58B007D11CB /* AuraIncrementorTests.swift in Sources */,
+				8D486AAD2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
