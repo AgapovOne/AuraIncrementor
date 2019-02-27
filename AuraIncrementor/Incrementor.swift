@@ -71,7 +71,7 @@ final class Incrementor {
         }
 
         if isAlreadyAtMaximum {
-            value = Constants.defaultMinimumValue
+            resetNumber()
         } else {
             value += Constants.addendValue
         }
@@ -88,6 +88,18 @@ final class Incrementor {
 
         self.maximumValue = maximumValue
 
+        var shouldResetNumber: Bool {
+            return maximumValue < value
+        }
+
+        if shouldResetNumber {
+            resetNumber()
+        }
+    }
+
+    /// Resets number to minimum value
+    func resetNumber() {
+        value = Constants.minimumValue
     }
 }
 
