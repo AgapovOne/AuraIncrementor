@@ -10,6 +10,7 @@
 		8D486AA82226E58B007D11CB /* AuraIncrementor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D486A9E2226E58B007D11CB /* AuraIncrementor.framework */; };
 		8D486AAD2226E58B007D11CB /* AuraIncrementorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AAC2226E58B007D11CB /* AuraIncrementorTests.swift */; };
 		8D486AAF2226E58B007D11CB /* AuraIncrementor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D486AA12226E58B007D11CB /* AuraIncrementor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D486AB92226E6DC007D11CB /* Incrementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AB82226E6DC007D11CB /* Incrementor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8D486AA72226E58B007D11CB /* AuraIncrementorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuraIncrementorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D486AAC2226E58B007D11CB /* AuraIncrementorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuraIncrementorTests.swift; sourceTree = "<group>"; };
 		8D486AAE2226E58B007D11CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D486AB82226E6DC007D11CB /* Incrementor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incrementor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				8D486AA12226E58B007D11CB /* AuraIncrementor.h */,
 				8D486AA22226E58B007D11CB /* Info.plist */,
+				8D486AB82226E6DC007D11CB /* Incrementor.swift */,
 			);
 			path = AuraIncrementor;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					8D486A9D2226E58B007D11CB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					8D486AA62226E58B007D11CB = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D486AB92226E6DC007D11CB /* Incrementor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		8D486AB32226E58B007D11CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.agapov.one.AuraIncrementor;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +372,7 @@
 		8D486AB42226E58B007D11CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +397,7 @@
 		8D486AB62226E58B007D11CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AuraIncrementorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +415,7 @@
 		8D486AB72226E58B007D11CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AuraIncrementorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
