@@ -9,26 +9,62 @@
 import XCTest
 @testable import AuraIncrementor
 
-class AuraIncrementorTests: XCTestCase {
+class AuraIncrementorPublicInterfaceTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // MARK: Get Number
+    func testGetNumber() {
+        let valueToCheck = 0
+
+        let incrementor = Incrementor()
+
+        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testGetNumberWithValidValue() {
+        let valueToCheck = 666
+        Incrementor.Constants.defaultMinimumValue = valueToCheck
+
+        let incrementor = Incrementor()
+
+        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetNumberWithDefaultValue() {
+        let valueToCheck = Incrementor.Constants.defaultMinimumValue
+
+        let incrementor = Incrementor()
+
+        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    // MARK: Increment number
+    func testIncrementNumberReturnsPreviousPlusOne() {
+        let newNumber = Incrementor.Constants.defaultMinimumValue + 1
+        let incrementor = Incrementor()
+
+        incrementor.increment()
+
+        XCTAssertEqual(incrementor.number, newNumber)
     }
 
+    // MARK: Set maximum number
+    func testSetMaximumValue() {
+        let maximumValue = 10
+        let incrementor = Incrementor()
+
+        try! incrementor.setMaximumValue(maximumValue)
+
+        XCTAssertEqual(incrementor.maximumValue, maximumValue)
+    }
+
+    func testMaximumValueResetsNumberToZero() {
+        let maximumValue = 1
+        let incrementor = Incrementor()
+
+        try! incrementor.setMaximumValue(maximumValue)
+        incrementor.increment() // 1
+        incrementor.increment() // 
+
+        XCTAssertEqual(incrementor.maximumValue, maximumValue)
+    }
 }
