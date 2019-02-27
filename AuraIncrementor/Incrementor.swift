@@ -8,8 +8,40 @@
 
 import Foundation
 
-public enum IncrementorError: Error {
+public enum IncrementorError: LocalizedError {
     case maximumValueLessThanZero
+
+    /// A localized message describing what error occurred.
+    public var errorDescription: String? {
+        switch self {
+        case .maximumValueLessThanZero:
+            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.errorDescription", comment: "")
+        }
+    }
+
+    /// A localized message describing the reason for the failure.
+    public var failureReason: String? {
+        switch self {
+        case .maximumValueLessThanZero:
+            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.failureReason", comment: "")
+        }
+    }
+
+    /// A localized message describing how one might recover from the failure.
+    public var recoverySuggestion: String? {
+        switch self {
+        case .maximumValueLessThanZero:
+            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.recoverySuggestion", comment: "")
+        }
+    }
+
+    /// A localized message providing "help" text if the user requests help.
+    public var helpAnchor: String? {
+        switch self {
+        case .maximumValueLessThanZero:
+            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.helpAnchor", comment: "")
+        }
+    }
 }
 
 final class Incrementor {

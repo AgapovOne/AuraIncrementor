@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  AuraIncrementor
+
+  Created by Alex Agapov on 27/02/2019.
+  Copyright © 2019 AgapovOne. All rights reserved.
+*/
+
+"IncrementorError.maximumValueLessThanZero.errorDescription" = "Setting maximum value to an integer below zero(0) is disallowed.";
+"IncrementorError.maximumValueLessThanZero.failureReason" = "You've used a value below zero in a setMaximumValue(_:) method.";
+"IncrementorError.maximumValueLessThanZero.recoverySuggestion" = "Check your input for setMaximumValue(_:) method. It should be more than zero(0)";
+"IncrementorError.maximumValueLessThanZero.helpAnchor" = "Use an integer more than zero(0) for a maximum value";

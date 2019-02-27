@@ -11,6 +11,7 @@
 		8D486AAD2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AAC2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift */; };
 		8D486AAF2226E58B007D11CB /* AuraIncrementor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D486AA12226E58B007D11CB /* AuraIncrementor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D486AB92226E6DC007D11CB /* Incrementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AB82226E6DC007D11CB /* Incrementor.swift */; };
+		8D486ABC22270213007D11CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D486ABE22270213007D11CB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
