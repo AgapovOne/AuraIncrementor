@@ -109,4 +109,18 @@ class IncrementorPublicInterfaceTests: XCTestCase {
 
         XCTAssertEqual(incrementor.number, 1)
     }
+
+    func testShouldResetNumberAfterSettingMaximumValueBelowCurrentNumber() {
+        let maximumValue = 1
+
+        let incrementor = Incrementor()
+
+        incrementor.increment() // 1
+        incrementor.increment() // 2
+        incrementor.increment() // 3
+
+        try! incrementor.setMaximumValue(maximumValue)
+
+        XCTAssertEqual(incrementor.number, 0)
+    }
 }
