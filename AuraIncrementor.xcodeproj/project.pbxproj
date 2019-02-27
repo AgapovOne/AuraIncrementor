@@ -12,6 +12,11 @@
 		8D486AAF2226E58B007D11CB /* AuraIncrementor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D486AA12226E58B007D11CB /* AuraIncrementor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D486AB92226E6DC007D11CB /* Incrementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AB82226E6DC007D11CB /* Incrementor.swift */; };
 		8D486ABC22270213007D11CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D486ABE22270213007D11CB /* Localizable.strings */; };
+		8D486AC7222709D9007D11CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AC6222709D9007D11CB /* AppDelegate.swift */; };
+		8D486AC9222709D9007D11CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D486AC8222709D9007D11CB /* ViewController.swift */; };
+		8D486ACC222709D9007D11CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D486ACA222709D9007D11CB /* Main.storyboard */; };
+		8D486ACE222709DB007D11CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D486ACD222709DB007D11CB /* Assets.xcassets */; };
+		8D486AD1222709DB007D11CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D486ACF222709DB007D11CB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,14 @@
 		8D486AAC2226E58B007D11CB /* IncrementorPublicInterfaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementorPublicInterfaceTests.swift; sourceTree = "<group>"; };
 		8D486AAE2226E58B007D11CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D486AB82226E6DC007D11CB /* Incrementor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incrementor.swift; sourceTree = "<group>"; };
+		8D486ABD22270213007D11CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8D486AC4222709D9007D11CB /* AuraIncrementorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuraIncrementorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D486AC6222709D9007D11CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D486AC8222709D9007D11CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D486ACB222709D9007D11CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D486ACD222709DB007D11CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D486AD0222709DB007D11CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D486AD2222709DB007D11CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +63,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D486AC1222709D9007D11CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +78,7 @@
 			children = (
 				8D486AA02226E58B007D11CB /* AuraIncrementor */,
 				8D486AAB2226E58B007D11CB /* AuraIncrementorTests */,
+				8D486AC5222709D9007D11CB /* AuraIncrementorExample */,
 				8D486A9F2226E58B007D11CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +88,7 @@
 			children = (
 				8D486A9E2226E58B007D11CB /* AuraIncrementor.framework */,
 				8D486AA72226E58B007D11CB /* AuraIncrementorTests.xctest */,
+				8D486AC4222709D9007D11CB /* AuraIncrementorExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +99,7 @@
 				8D486AA12226E58B007D11CB /* AuraIncrementor.h */,
 				8D486AA22226E58B007D11CB /* Info.plist */,
 				8D486AB82226E6DC007D11CB /* Incrementor.swift */,
+				8D486ABE22270213007D11CB /* Localizable.strings */,
 			);
 			path = AuraIncrementor;
 			sourceTree = "<group>";
@@ -88,6 +111,19 @@
 				8D486AAE2226E58B007D11CB /* Info.plist */,
 			);
 			path = AuraIncrementorTests;
+			sourceTree = "<group>";
+		};
+		8D486AC5222709D9007D11CB /* AuraIncrementorExample */ = {
+			isa = PBXGroup;
+			children = (
+				8D486AC6222709D9007D11CB /* AppDelegate.swift */,
+				8D486AC8222709D9007D11CB /* ViewController.swift */,
+				8D486ACA222709D9007D11CB /* Main.storyboard */,
+				8D486ACD222709DB007D11CB /* Assets.xcassets */,
+				8D486ACF222709DB007D11CB /* LaunchScreen.storyboard */,
+				8D486AD2222709DB007D11CB /* Info.plist */,
+			);
+			path = AuraIncrementorExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +176,23 @@
 			productReference = 8D486AA72226E58B007D11CB /* AuraIncrementorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8D486AC3222709D9007D11CB /* AuraIncrementorExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D486AD3222709DB007D11CB /* Build configuration list for PBXNativeTarget "AuraIncrementorExample" */;
+			buildPhases = (
+				8D486AC0222709D9007D11CB /* Sources */,
+				8D486AC1222709D9007D11CB /* Frameworks */,
+				8D486AC2222709D9007D11CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuraIncrementorExample;
+			productName = AuraIncrementorExample;
+			productReference = 8D486AC4222709D9007D11CB /* AuraIncrementorExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +210,9 @@
 					8D486AA62226E58B007D11CB = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					8D486AC3222709D9007D11CB = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 8D486A982226E58B007D11CB /* Build configuration list for PBXProject "AuraIncrementor" */;
@@ -165,6 +221,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8D486A942226E58B007D11CB;
 			productRefGroup = 8D486A9F2226E58B007D11CB /* Products */;
@@ -173,6 +230,7 @@
 			targets = (
 				8D486A9D2226E58B007D11CB /* AuraIncrementor */,
 				8D486AA62226E58B007D11CB /* AuraIncrementorTests */,
+				8D486AC3222709D9007D11CB /* AuraIncrementorExample */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D486ABC22270213007D11CB /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +248,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D486AC2222709D9007D11CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D486AD1222709DB007D11CB /* LaunchScreen.storyboard in Resources */,
+				8D486ACE222709DB007D11CB /* Assets.xcassets in Resources */,
+				8D486ACC222709D9007D11CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +280,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D486AC0222709D9007D11CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D486AC9222709D9007D11CB /* ViewController.swift in Sources */,
+				8D486AC7222709D9007D11CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -221,11 +299,39 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		8D486ABE22270213007D11CB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D486ABD22270213007D11CB /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8D486ACA222709D9007D11CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D486ACB222709D9007D11CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D486ACF222709DB007D11CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D486AD0222709DB007D11CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		8D486AB02226E58B007D11CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -290,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -431,6 +538,40 @@
 			};
 			name = Release;
 		};
+		8D486AD4222709DB007D11CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AuraIncrementorExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.agapov.one.AuraIncrementorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D486AD5222709DB007D11CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AuraIncrementorExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.agapov.one.AuraIncrementorExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -457,6 +598,15 @@
 			buildConfigurations = (
 				8D486AB62226E58B007D11CB /* Debug */,
 				8D486AB72226E58B007D11CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D486AD3222709DB007D11CB /* Build configuration list for PBXNativeTarget "AuraIncrementorExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D486AD4222709DB007D11CB /* Debug */,
+				8D486AD5222709DB007D11CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
