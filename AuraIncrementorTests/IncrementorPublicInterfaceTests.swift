@@ -66,9 +66,11 @@ class IncrementorPublicInterfaceTests: XCTestCase {
         do {
             try incrementor.setMaximumValue(maximumValue)
             XCTFail("Shouldn't allow to set up value below zero. Trying to set \(maximumValue)")
-        } catch {
+        } catch let error as IncrementorError {
             print(error.localizedDescription)
             XCTAssertEqual(error.localizedDescription.isEmpty, false)
+        } catch {
+            XCTFail("Error should be of type IncrementorError")
         }
     }
 
