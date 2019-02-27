@@ -46,63 +46,79 @@ public enum IncrementorError: LocalizedError {
 
 final class Incrementor {
 
+    /// NOTE: Allowed to be modified. Used for internal implementation testing
     enum Constants {
-        static var defaultMinimumValue: Int = 0
-        static var defaultMaximumValue: Int = Int.max
+        /// Default minimum value for a number after initialization.
+        static var minimumValue: Int = 0
+        /// Default maximum value for a number to define when the value should be reset.
+        static var maximumValue: Int = Int.max
+        /// Default integer to use while incrementing.
+        static var addendValue: Int = 1
+        /// Lower bound to forbid setting maximum value.
+        static var lowerBoundForMaximumValue: Int = 0
     }
 
-    var value: Int = Constants.defaultMinimumValue
-    var maximumValue: Int = Constants.defaultMaximumValue
+    /// Internal value to store and set current number.
+    var value: Int = Constants.minimumValue
 
-    var isAlreadyAtMaximum: Bool {
-        return value >= maximumValue
-    }
+    /// Maximum value to.
+    var maximumValue: Int = Constants.maximumValue
 
+    /// Increments value with an addend.
     func incrementIfShould() {
+        var isAlreadyAtMaximum: Bool {
+            return value >= maximumValue
+        }
+
         if isAlreadyAtMaximum {
             value = Constants.defaultMinimumValue
         } else {
-            value += 1
+            value += Constants.addendValue
         }
     }
 
     func setMaximumValueIfPossible(_ maximumValue: Int) throws {
-        if maximumValue < 0 {
-            throw IncrementorError.maximumValueLessThanZero
-        } else {
-            self.maximumValue = maximumValue
+        var isAllowedToSetMaximumValue: Bool {
+            return maximumValue >= Constants.lowerBoundForMaximumValue
         }
+
+        guard isAllowedToSetMaximumValue else {
+            throw IncrementorError.maximumValueLessThanZero
+        }
+
+        self.maximumValue = maximumValue
+
     }
 }
 
 extension Incrementor {
 
-    /**
-     * Возвращает текущее число. В самом начале это ноль.
-     */
+    /// Current number. Default value after initialization is 0.
     public var number: Int {
         return value
     }
 
-    /**
-     * Увеличивает текущее число на один. После каждого вызова этого
-     * метода getNumber() будет возвращать число на один больше.
-     */
+    /// Increments value by 1. Resets to 0 if it increments on a maximum value
+    ///
+    /// The number maximum value is defined by `setMaximumValue(_:)` method.
+    ///
+    /// i.e. if a number is 1 and a maximum value is 1, this method will reset number to 0 and `number` getter will return 0
     public func increment() {
         incrementIfShould()
     }
 
-    /**
-     * Устанавливает максимальное значение текущего числа.
-     * Когда при вызове incrementNumber() текущее число достигает
-     * этого значения, оно обнуляется, т.е. getNumber() начинает
-     * снова возвращать ноль, и снова один после следующего
-     * вызова incrementNumber() и так далее.
-     * По умолчанию максимум -- максимальное значение int.
-     * Если при смене максимального значения число резко начинает
-     * превышать максимальное значение, то число надо обнулить.
-     * Нельзя позволять установить тут число меньше нуля.
-     */
+    ///
+    /// Sets up maximum value for a number.
+    ///
+    /// Used in increment method to define if a number should be reset to 0 after reaching maximum value.
+    /// Read `increment()` method documentation for more details.
+    /// Will reset number to zero if maximum value is less than current number
+    ///
+    /// Default maximum value is `Int.max`
+    /// Maximum value can't be less than zero (0)
+    ///
+    /// - Parameter maximumValue: Integer
+    /// - Throws: IncrementorError with description why operation is not possible
     public func setMaximumValue(_ maximumValue: Int) throws {
         try setMaximumValueIfPossible(maximumValue)
     }
