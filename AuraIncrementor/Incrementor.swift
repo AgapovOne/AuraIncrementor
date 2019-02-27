@@ -15,7 +15,9 @@ public enum IncrementorError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .maximumValueLessThanZero:
-            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.errorDescription", comment: "")
+            // TODO: Use Localized string
+//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.errorDescription", comment: "")
+            return "Setting maximum value to an integer below zero(0) is disallowed.";
         }
     }
 
@@ -23,7 +25,9 @@ public enum IncrementorError: LocalizedError {
     public var failureReason: String? {
         switch self {
         case .maximumValueLessThanZero:
-            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.failureReason", comment: "")
+            // TODO: Use Localized string
+//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.failureReason", comment: "")
+            return "You've used a value below zero in a setMaximumValue(_:) method.";
         }
     }
 
@@ -31,7 +35,9 @@ public enum IncrementorError: LocalizedError {
     public var recoverySuggestion: String? {
         switch self {
         case .maximumValueLessThanZero:
-            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.recoverySuggestion", comment: "")
+            // TODO: Use Localized string
+//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.recoverySuggestion", comment: "")
+            return "Check your input for setMaximumValue(_:) method. It should be more than zero(0)";
         }
     }
 
@@ -39,12 +45,14 @@ public enum IncrementorError: LocalizedError {
     public var helpAnchor: String? {
         switch self {
         case .maximumValueLessThanZero:
-            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.helpAnchor", comment: "")
+            // TODO: Use Localized string
+//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.helpAnchor", comment: "")
+            return "Use an integer more than zero(0) for a maximum value";
         }
     }
 }
 
-final class Incrementor {
+public final class Incrementor {
 
     /// NOTE: Allowed to be modified. Used for internal implementation testing
     enum Constants {
@@ -77,6 +85,7 @@ final class Incrementor {
         }
     }
 
+    /// TODO: DOCUMENTATION
     func setMaximumValueIfPossible(_ maximumValue: Int) throws {
         var isAllowedToSetMaximumValue: Bool {
             return maximumValue >= Constants.lowerBoundForMaximumValue
@@ -101,6 +110,8 @@ final class Incrementor {
     func resetNumber() {
         value = Constants.minimumValue
     }
+
+    public init() {}
 }
 
 extension Incrementor {

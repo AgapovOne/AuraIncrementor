@@ -13,11 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         print(IncrementorError.maximumValueLessThanZero.localizedDescription)
-        print(NSLocalizedString("x", bundle: Bundle(for: type(of: self)), comment: "XEXE"))
+//        print(NSLocalizedString("x", bundle: Bundle(for: type(of: self)), comment: "XEXE"))
+//        print(NSLocalizedString("x", bundle: Bundle(for: type(of: Incrementor())), comment: "XEXE"))
     }
-
-
 }
 
