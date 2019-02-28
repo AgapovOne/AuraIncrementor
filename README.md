@@ -15,10 +15,10 @@ Cocoapods. Add to Podfile:
   pod 'AuraIncrementor'
 ```
 
-## TODO
+#### Notes:
 
-- Add codecoverage report for web
-- Test internal interface cases (?)
+Internal interface is covered in public tests, but not tested itself with different inputs and constants.
+`Incrementor.Constants` is introduced for easier support and extendability of an `Incrementor` class
 
 ---
 
