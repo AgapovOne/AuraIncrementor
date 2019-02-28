@@ -19,4 +19,3 @@ class ViewController: UIViewController {
 //        print(NSLocalizedString("x", bundle: Bundle(for: type(of: Incrementor())), comment: "XEXE"))
     }
 }
-

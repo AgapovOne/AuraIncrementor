@@ -17,7 +17,7 @@ public enum IncrementorError: LocalizedError {
         case .maximumValueLessThanZero:
             // TODO: Use Localized string
 //            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.errorDescription", comment: "")
-            return "Setting maximum value to an integer below zero(0) is disallowed.";
+            return "Setting maximum value to an integer below zero(0) is disallowed."
         }
     }
 
@@ -27,7 +27,7 @@ public enum IncrementorError: LocalizedError {
         case .maximumValueLessThanZero:
             // TODO: Use Localized string
 //            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.failureReason", comment: "")
-            return "You've used a value below zero in a setMaximumValue(_:) method.";
+            return "You've used a value below zero in a setMaximumValue(_:) method."
         }
     }
 
@@ -37,7 +37,7 @@ public enum IncrementorError: LocalizedError {
         case .maximumValueLessThanZero:
             // TODO: Use Localized string
 //            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.recoverySuggestion", comment: "")
-            return "Check your input for setMaximumValue(_:) method. It should be more than zero(0)";
+            return "Check your input for setMaximumValue(_:) method. It should be more than zero(0)"
         }
     }
 
@@ -47,7 +47,7 @@ public enum IncrementorError: LocalizedError {
         case .maximumValueLessThanZero:
             // TODO: Use Localized string
 //            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.helpAnchor", comment: "")
-            return "Use an integer more than zero(0) for a maximum value";
+            return "Use an integer more than zero(0) for a maximum value"
         }
     }
 }
@@ -59,7 +59,7 @@ public final class Incrementor {
         /// Default minimum value for a number after initialization.
         static var minimumValue: Int = 0
         /// Default maximum value for a number to define when the value should be reset.
-        static var maximumValue: Int = Int.max
+        static var maximumValue = Int.max
         /// Default integer to use while incrementing.
         static var addendValue: Int = 1
         /// Lower bound to forbid setting maximum value.
