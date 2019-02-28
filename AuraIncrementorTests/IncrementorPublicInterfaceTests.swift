@@ -21,26 +21,10 @@ class IncrementorPublicInterfaceTests: XCTestCase {
         XCTAssertEqual(incrementor.number, minimumValue, "Value should be minimum after initialization")
     }
 
-//    func testGetNumberWithValidValue() {
-//        let valueToCheck = 666
-//        Incrementor.Constants.defaultMinimumValue = valueToCheck
-//
-//        let incrementor = Incrementor()
-//
-//        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
-//    }
-//
-//    func testGetNumberWithDefaultValue() {
-//        let valueToCheck = Incrementor.Constants.defaultMinimumValue
-//
-//        let incrementor = Incrementor()
-//
-//        XCTAssertEqual(incrementor.number, valueToCheck, "Value should be minimum after initialization")
-//    }
 
     // MARK: Increment number
     func testIncrementNumberReturnsPreviousPlusOne() {
-//        let newNumber = Incrementor.Constants.minimumValue + 1
+        //        let newNumber = Incrementor.Constants.minimumValue + 1
         let newNumber = 1
         let incrementor = Incrementor()
 
@@ -72,7 +56,13 @@ class IncrementorPublicInterfaceTests: XCTestCase {
             XCTFail("Shouldn't allow to set up value below zero. Trying to set \(maximumValue)")
         } catch let error as IncrementorError {
             print(error.localizedDescription)
-            XCTAssertEqual(error.localizedDescription.isEmpty, false)
+            [error.localizedDescription,
+             error.errorDescription,
+             error.recoverySuggestion,
+             error.failureReason,
+             error.helpAnchor].forEach {
+                XCTAssertEqual($0?.isEmpty, false)
+            }
         } catch {
             XCTFail("Error should be of type IncrementorError")
         }
