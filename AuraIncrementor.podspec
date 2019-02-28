@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "AuraIncrementor"
-  spec.version = "0.0.1"
+  spec.version = "0.0.2"
   spec.summary = "Incrementor class for AURA devices."
 
   spec.description = <<-DESC
