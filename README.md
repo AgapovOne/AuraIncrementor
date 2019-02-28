@@ -1,5 +1,5 @@
 # AuraIncrementor
-[![Build Status](https://app.bitrise.io/app/522240cc0369fafb/status.svg?token=R3GjZdH7cD0IUOUwqgORng&branch=master)](https://app.bitrise.io/app/522240cc0369fafb)
+[![Build Status](https://app.bitrise.io/app/522240cc0369fafb/status.svg?token=R3GjZdH7cD0IUOUwqgORng&branch=master)](https://app.bitrise.io/app/522240cc0369fafb) [![codecov](https://codecov.io/gh/AgapovOne/AuraIncrementor/branch/master/graph/badge.svg)](https://codecov.io/gh/AgapovOne/AuraIncrementor)
 
 Incrementor class. Fully tested framework &amp; pod
 
