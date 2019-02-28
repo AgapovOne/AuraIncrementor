@@ -61,7 +61,7 @@ public final class Incrementor {
     /// Internal value to store and set current number.
     var value: Int = Constants.minimumValue
 
-    /// Maximum value to.
+    /// Maximum value to limit a number incremention.
     var maximumValue: Int = Constants.maximumValue
 
     /// Increments value with an addend.
@@ -80,7 +80,7 @@ public final class Incrementor {
     /// Sets maximum value if it's more than or equal to lower bound. Also resets number if maximum value is less that number
     ///
     /// - Parameter maximumValue
-    /// - Throws: IncrementorError when maximum value is less than lower bound
+    /// - Throws: IncrementorError when maximum value is less than lower bound.
     func setMaximumValueIfPossible(_ maximumValue: Int) throws {
         var isAllowedToSetMaximumValue: Bool {
             return maximumValue >= Constants.lowerBoundForMaximumValue
