@@ -54,9 +54,13 @@ class IncrementorPublicInterfaceTests: XCTestCase {
         let maximumValue = 10
         let incrementor = Incrementor()
 
-        try! incrementor.setMaximumValue(maximumValue)
+        do {
+            try incrementor.setMaximumValue(maximumValue)
 
-        XCTAssertEqual(incrementor.maximumValue, maximumValue)
+            XCTAssertEqual(incrementor.maximumValue, maximumValue)
+        } catch {
+            XCTFail("Should not throw on setMaximumValue")
+        }
     }
 
     func testShouldNotAllowSetMaximumNumberToLessThanZero() {
@@ -79,10 +83,14 @@ class IncrementorPublicInterfaceTests: XCTestCase {
         let maximumValue = 1
         let incrementor = Incrementor()
 
-        try! incrementor.setMaximumValue(maximumValue)
-        incrementor.increment() // 1
+        do {
+            try incrementor.setMaximumValue(maximumValue)
+            incrementor.increment() // 1
 
-        XCTAssertEqual(incrementor.number, maximumValue)
+            XCTAssertEqual(incrementor.number, maximumValue)
+        } catch {
+            XCTFail("Should not throw on setMaximumValue")
+        }
     }
 
     func testIncrementationWithMaximumValueResetsNumberToZero() {
@@ -91,11 +99,15 @@ class IncrementorPublicInterfaceTests: XCTestCase {
 
         let incrementor = Incrementor()
 
-        try! incrementor.setMaximumValue(maximumValue)
-        incrementor.increment() // 1
-        incrementor.increment() // 0
+        do {
+            try incrementor.setMaximumValue(maximumValue)
+            incrementor.increment() // 1
+            incrementor.increment() // 0
 
-        XCTAssertEqual(incrementor.number, minimumValue)
+            XCTAssertEqual(incrementor.number, minimumValue)
+        } catch {
+            XCTFail("Should not throw on setMaximumValue")
+        }
     }
 
     func testIncrementationWithMaximumValueWillContinueAfterReset() {
@@ -103,13 +115,17 @@ class IncrementorPublicInterfaceTests: XCTestCase {
 
         let incrementor = Incrementor()
 
-        try! incrementor.setMaximumValue(maximumValue)
-        incrementor.increment() // 1
-        incrementor.increment() // 2
-        incrementor.increment() // 0
-        incrementor.increment() // 1
+        do {
+            try incrementor.setMaximumValue(maximumValue)
+            incrementor.increment() // 1
+            incrementor.increment() // 2
+            incrementor.increment() // 0
+            incrementor.increment() // 1
 
-        XCTAssertEqual(incrementor.number, 1)
+            XCTAssertEqual(incrementor.number, 1)
+        } catch {
+            XCTFail("Should not throw on setMaximumValue")
+        }
     }
 
     func testShouldResetNumberAfterSettingMaximumValueBelowCurrentNumber() {
@@ -121,8 +137,12 @@ class IncrementorPublicInterfaceTests: XCTestCase {
         incrementor.increment() // 2
         incrementor.increment() // 3
 
-        try! incrementor.setMaximumValue(maximumValue)
+        do {
+            try incrementor.setMaximumValue(maximumValue)
 
-        XCTAssertEqual(incrementor.number, 0)
+            XCTAssertEqual(incrementor.number, 0)
+        } catch {
+            XCTFail("Should not throw on setMaximumValue")
+        }
     }
 }
