@@ -1,17 +1,23 @@
 # AuraIncrementor
+[![Build Status](https://app.bitrise.io/app/522240cc0369fafb/status.svg?token=R3GjZdH7cD0IUOUwqgORng&branch=master)](https://app.bitrise.io/app/522240cc0369fafb)
 Incrementor class. Fully tested framework &amp; pod
 
 ---
 
+## How to use
+
+To try:
+`pod try AuraIncrementor` or download and open .xcodeproj :)
+
+Cocoapods. Add to Podfile:
+```
+  pod 'AuraIncrementor'
+```
+
 ## TODO
 
 - Swiftlint
-- Codecov connection
 - Test internal interface cases (?)
-
-## How to use
-
-`pod try AuraIncrementor` or download and open .xcodeproj :)
 
 ---
 
