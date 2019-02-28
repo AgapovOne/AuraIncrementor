@@ -15,9 +15,7 @@ public enum IncrementorError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .maximumValueLessThanZero:
-            // TODO: Use Localized string
-//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.errorDescription", comment: "")
-            return "Setting maximum value to an integer below zero(0) is disallowed."
+            return AILocalizedString("IncrementorError.maximumValueLessThanZero.errorDescription")
         }
     }
 
@@ -25,9 +23,7 @@ public enum IncrementorError: LocalizedError {
     public var failureReason: String? {
         switch self {
         case .maximumValueLessThanZero:
-            // TODO: Use Localized string
-//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.failureReason", comment: "")
-            return "You've used a value below zero in a setMaximumValue(_:) method."
+            return AILocalizedString("IncrementorError.maximumValueLessThanZero.failureReason")
         }
     }
 
@@ -35,9 +31,7 @@ public enum IncrementorError: LocalizedError {
     public var recoverySuggestion: String? {
         switch self {
         case .maximumValueLessThanZero:
-            // TODO: Use Localized string
-//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.recoverySuggestion", comment: "")
-            return "Check your input for setMaximumValue(_:) method. It should be more than zero(0)"
+            return AILocalizedString("IncrementorError.maximumValueLessThanZero.recoverySuggestion")
         }
     }
 
@@ -45,9 +39,7 @@ public enum IncrementorError: LocalizedError {
     public var helpAnchor: String? {
         switch self {
         case .maximumValueLessThanZero:
-            // TODO: Use Localized string
-//            return NSLocalizedString("IncrementorError.maximumValueLessThanZero.helpAnchor", comment: "")
-            return "Use an integer more than zero(0) for a maximum value"
+            return AILocalizedString("IncrementorError.maximumValueLessThanZero.helpAnchor")
         }
     }
 }

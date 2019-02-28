@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         print(IncrementorError.maximumValueLessThanZero.localizedDescription)
+        print(IncrementorError.maximumValueLessThanZero.errorDescription)
+        print(IncrementorError.maximumValueLessThanZero.recoverySuggestion)
+        print(IncrementorError.maximumValueLessThanZero.failureReason)
+        print(IncrementorError.maximumValueLessThanZero.helpAnchor)
 //        print(NSLocalizedString("x", bundle: Bundle(for: type(of: self)), comment: "XEXE"))
 //        print(NSLocalizedString("x", bundle: Bundle(for: type(of: Incrementor())), comment: "XEXE"))
     }
