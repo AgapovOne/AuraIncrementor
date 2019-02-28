@@ -63,7 +63,7 @@ class IncrementorPublicInterfaceTests: XCTestCase {
         }
     }
 
-    func testShouldNotAllowSetMaximumNumberToLessThanZero() {
+    func testShouldNotAllowSetMaximumNumberToLessThanZeroWithDescriptiveError() {
         let maximumValue = -5
         let incrementor = Incrementor()
 
