@@ -17,7 +17,7 @@ Cocoapods. Add to Podfile:
 
 ## TODO
 
-- Swiftlint
+- Add codecoverage report for web
 - Test internal interface cases (?)
 
 ---
